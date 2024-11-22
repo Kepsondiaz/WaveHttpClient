@@ -1,0 +1,19 @@
+{
+    "name": "mac_user/wave-http-client",
+    "description": "http client to interact with wave api",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MacUser\\WaveHttpClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kepsondiaz",
+            "email": "kherabadiaby328@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^9.6"
+    }
+}
