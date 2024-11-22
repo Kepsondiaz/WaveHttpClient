@@ -1,5 +1,5 @@
 {
-    "name": "mac_user/wave-http-client",
+    "name": "Kepsondiaz/wave-http-client",
     "description": "http client to interact with wave api",
     "license": "MIT",
     "autoload": {
