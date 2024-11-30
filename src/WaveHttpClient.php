@@ -9,7 +9,7 @@ use Kepsondiaz\HttpParsedResponse\HttpParsedResponse;
 
 class WaveHttpClient
 {
-    public function balance(string $apiToken)
+    public static function balance(string $apiToken)
     {
         $response = Http::withHeader('idempotency-key', str()->uuid()->toString())
             ->withToken($apiToken)
@@ -22,7 +22,7 @@ class WaveHttpClient
     /*
         * create a new payout
     */
-    public function payout(string $apiToken, string $recipient, float $amount, ?string $client_reference, ?string $name, ?string $national_id, ?string $payment_reason): HttpParsedResponse
+    public static function payout(string $apiToken, string $recipient, float $amount, ?string $client_reference, ?string $name, ?string $national_id, ?string $payment_reason): HttpParsedResponse
     {
         $response = Http::withHeader('idempotency-key', str()->uuid()->toString())
             ->withToken($apiToken)
@@ -59,7 +59,7 @@ class WaveHttpClient
     /**
      * Retrieves a single payout.
      */
-    public function getPayout(string $apiToken, string $id): HttpParsedResponse
+    public static function getPayout(string $apiToken, string $id): HttpParsedResponse
     {
         $response = Http::withToken($apiToken)
             ->acceptJson()
@@ -74,7 +74,7 @@ class WaveHttpClient
      * Retrieves a list of payouts based on the provided query parameters.
     */
 
-    public function searchPayouts(string $apiToken, string $client_reference): HttpParsedResponse
+    public static function searchPayouts(string $apiToken, string $client_reference): HttpParsedResponse
     {
         $response = Http::withToken($apiToken)
             ->acceptJson()
@@ -89,7 +89,7 @@ class WaveHttpClient
       * Create payout batch.
       */
 
-    public function createPayoutBatch(string $apiToken, array $payouts): HttpParsedResponse
+    public static function createPayoutBatch(string $apiToken, array $payouts): HttpParsedResponse
     {
         $response = Http::withHeader('idempotency-key', str()->uuid()->toString())
             ->withToken($apiToken)
@@ -114,7 +114,7 @@ class WaveHttpClient
     /**
     * get payout batch.
     */
-    public function getPayoutBatch(string $apiToken, string $id): HttpParsedResponse
+    public static function getPayoutBatch(string $apiToken, string $id): HttpParsedResponse
     {
         $response = Http::withToken($apiToken)
         ->acceptJson()
@@ -125,7 +125,7 @@ class WaveHttpClient
         return new HttpParsedResponse($response);
     }
 
-    public function payoutB2B(string $apiToken, string $recipient, float $amount): HttpParsedResponse
+    public static function payoutB2B(string $apiToken, string $recipient, float $amount): HttpParsedResponse
     {
         $response = Http::withHeader('idempotency-key', str()->uuid()->toString())
             ->withToken($apiToken)
@@ -151,7 +151,7 @@ class WaveHttpClient
         return new HttpParsedResponse($response);
     }
 
-    public function payoutB2BRecipientPays(string $apiToken, string $recipient, float $amount): HttpParsedResponse
+    public static function payoutB2BRecipientPays(string $apiToken, string $recipient, float $amount): HttpParsedResponse
     {
         $response = Http::withHeader('idempotency-key', str()->uuid()->toString())
             ->withToken($apiToken)
