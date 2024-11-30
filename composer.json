@@ -5,6 +5,9 @@
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "require": {
+        "kepsondiaz/wave-http-client": "dev-main"
+    },
     "autoload": {
         "psr-4": {
             "MacUser\\WaveHttpClient\\": "src/"
