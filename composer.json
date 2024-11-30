@@ -2,7 +2,7 @@
     "name": "kepsondiaz/wave-http-client",
     "description": "http client to interact with wave api",
     "license": "MIT",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
@@ -15,6 +15,9 @@
             "email": "kepson.diaz@gmail.com"
         }
     ],
+    "require": {
+        "php": "^8.0"
+    },
     "require-dev": {
         "orchestra/testbench": "^9.6",
         "pestphp/pest": "^3.5"
