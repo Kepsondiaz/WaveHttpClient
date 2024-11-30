@@ -6,7 +6,8 @@
       src="https://www.wave.com/img/nav-logo.png"
     />
 
-    <br/>
+
+
 ## Introduction
 
 This is simple package that help you to easily integrate wave business api into yout laravel project .
