@@ -1,5 +1,6 @@
 {
     "name": "kepsondiaz/wave-http-client",
+    "version": "1.0.0",
     "description": "http client to interact with wave api",
     "license": "MIT",
     "autoload": {
@@ -10,7 +11,7 @@
     "authors": [
         {
             "name": "Kepsondiaz",
-            "email": "kherabadiaby328@gmail.com"
+            "email": "kepson.diaz@gmail.com"
         }
     ],
     "require-dev": {
