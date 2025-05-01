@@ -17,3 +17,6 @@ This is simple package that help you to easily integrate wave business api into 
 ```php
 composer require kepsondiaz/wave-http-client
 ```
+
+## Wave Official Documentation
+[Wave Business API Documentation](https://docs.wave.com/business#api-reference)
